@@ -1,0 +1,117 @@
+.side-navigation {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-navigation.light {
+    background-color: var(--bg-grey);
+}
+
+.side-navigation.dark {
+    background-color: var(--bg-black);
+    color: var(--font-white);
+}
+
+
+
+.side-navigation>nav {
+    padding-top: 1em;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1em;
+}
+
+.side-navigation>nav>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5em;
+    font-size: 1.5em;
+    font-family: "Roboto", sans-serif;
+
+    li {
+        padding: 5px 35px 5px 50px;
+        position: relative;
+    }
+}
+
+
+.side-navigation>nav>ul li.active {
+    border-radius: 100vmax 0 0 100vmax;
+}
+
+.side-navigation>nav>ul li.active::before {
+    content: '';
+    width: 1em;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 0 0 50% 0;
+    right: 0;
+    top: calc(1em * -1);
+
+}
+
+.side-navigation>nav>ul li.active::after {
+    content: '';
+    width: 1em;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 0 50% 0 0;
+    right: 0;
+    bottom: calc(1em * -1);
+}
+
+.side-navigation>nav>ul.light {
+
+    li {
+        background-color: rgb(231, 229, 229);
+    }
+
+    li.active {
+        background-color: white;
+    }
+
+    li.active::before {
+        background-color: rgb(231, 229, 229);
+        box-shadow: 5px 5px 0px 5px white;
+    }
+
+    li.active::after {
+        background-color: rgb(231, 229, 229);
+        box-shadow: 5px -5px 0px 5px white;
+    }
+}
+
+.side-navigation>nav>ul.dark {
+
+    li {
+        background-color: var(--bg-black);
+        color: var(--font-white);
+    }
+
+    li.active {
+        background-color: var(--bg-light-black);
+        color: var(--font-white);
+    }
+
+    li.active::before {
+        background-color: var(--bg-black);
+        box-shadow: 5px 5px 0px 5px var(--bg-light-black);
+    }
+
+    li.active::after {
+        background-color: var(--bg-black);
+        box-shadow: 5px -5px 0px 5px var(--bg-light-black);
+    }
+}
+
+@media (min-width:450px) {}
+
+@media (max-width:450px) {
+
+    .side-navigation {
+        display: none;
+    }
+
+}
