@@ -14,7 +14,8 @@ const newsSlice = createSlice({
             state.news = action.payload;
             state.isLoading = false;
         },
-        newsFetchFailure: () => {
+        newsFetchFailure: (state, action) => {
+            state.news = action.payload;
             state.isLoading = false;
         }
     }
