@@ -62,21 +62,16 @@
 
 
 .mobile-nav-list {
-    /* display: grid;
-    grid-template-rows: 0fr; */
     overflow: hidden;
-    /* margin-top: 20px; */
     position: fixed;
     width: 50%;
     right: 0px;
     top: 60px;
-
     backdrop-filter: blur(20px);
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    transition: max-height 0.5s, padding 0.5s;
-
-    max-height: 0;
+    transition: height 0.5s, padding 0.5s;
+    height: 0;
 }
 
 .mobile-nav-list.light {
@@ -106,10 +101,10 @@
 
 
 .mobile-nav-list.open {
-    transition: max-height 0.5s, padding 0.5s;
+    transition: height 0.5s, padding 0.5s;
     padding: 10px 0;
     top: 60px;
-    max-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -123,7 +118,7 @@
 .mobile-nav-list>ul {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    
     gap: 0.3em;
 
 
