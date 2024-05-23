@@ -4,8 +4,6 @@ import data from '../../data.json';
 import './news.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { newsAction } from '../../store/newsSlice';
-import loading from '../../../public/loading.gif'
-
 
 const News = () => {
     const news = useSelector(state => state.news.news);
