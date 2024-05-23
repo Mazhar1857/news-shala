@@ -106,9 +106,9 @@
     }
 }
 
-@media (min-width:450px) {}
+@media (min-width:968px) {}
 
-@media (max-width:450px) {
+@media (max-width:968px) {
 
     .side-navigation {
         display: none;

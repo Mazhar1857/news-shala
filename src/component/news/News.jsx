@@ -8,11 +8,12 @@ import { newsAction } from '../../store/newsSlice';
 
 const News = () => {
     const news = useSelector(state => state.news.news);
+    const category = useSelector(state => state.category);
     const dispatch = useDispatch();
 
     useEffect(()=>{
         dispatch(newsAction.newsFetch())
-    },[])
+    },[category])
     return (
         <div className='news'>
             {news['results'] && news['results'].map(item => {

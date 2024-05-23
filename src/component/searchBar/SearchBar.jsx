@@ -1,24 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { IoSearchSharp } from "react-icons/io5";
 import './searchBar.css'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import searchSlice, { searchAction } from '../../store/searchSlice';
 
 const SearchBar = () => {
     const theme = useSelector(state => state.theme)
     const searchInput = useSelector(state => state.search)
+    const dispatch = useDispatch();
     const [activeSearch, setActiveSearch] = useState('');
     const [input, setInput] = useState('')
     const inputRef = useRef(null);
     const iconRef = useRef(null);
 
     const handleSearch = () => {
-
-        if (input) console.log(input);
-
         setActiveSearch((pre) => {
             return pre === 'active' ? '' : 'active'
         })
 
+        if (input) {
+            dispatch(searchAction.search(input));
+        }
     }
 
     const handleInput = (e) => {

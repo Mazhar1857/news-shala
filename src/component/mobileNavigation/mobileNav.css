@@ -152,13 +152,13 @@
     overflow: hidden;
 }
 
-@media (min-width:450px) {
+@media (min-width:968px) {
     .mobile-nav {
         display: none
     }
 }
 
-@media (max-width:450px) {
+@media (max-width:968px) {
     .mobile-nav {
         display: block;
     }

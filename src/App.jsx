@@ -29,8 +29,7 @@ function App() {
 
       <main className={`news-section ${theme.toLowerCase()}`}>
         <Routes>
-          <Route path='/' element={<Navigate to='general' />} />
-          <Route path='/general' element={<News />} />
+          <Route path='/' element={<Navigate to='top' />} />
           <Route path='/business' element={<News />} />
           <Route path='/crime' element={<News />} />
           <Route path='/domestic' element={<News />} />

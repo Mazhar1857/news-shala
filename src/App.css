@@ -26,6 +26,8 @@
     grid-area: news;
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .news-section.light {
@@ -36,7 +38,7 @@
     background-color: var(--bg-light-black);
 }
 
-@media (min-width:450px) {
+@media (min-width:968px) {
 
     .container {
         display: grid;
@@ -101,7 +103,7 @@
 }
 
 
-@media (max-width:450px) {
+@media (max-width:968px) {
 
     .container {
         display: grid;

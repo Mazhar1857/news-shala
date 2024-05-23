@@ -41,7 +41,7 @@
     border: none;
 }
 
-@media (min-width:450px) {
+@media (min-width:968px) {
 
     .search-bar {
         height: 40px;
@@ -70,7 +70,7 @@
     }
 }
 
-@media (max-width:450px) {
+@media (max-width:968px) {
 
     .search-icon {
         position: absolute;
