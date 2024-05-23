@@ -8,7 +8,6 @@ const newsSlice = createSlice({
     },
     reducers: {
         newsFetch: (state) => {
-            console.log('newsFetch')
             state.isLoading = true;
         },
         newsFetchSucess: (state, action) => {
