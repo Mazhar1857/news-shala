@@ -68,7 +68,7 @@
     right: 0px;
     top: 60px;
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    --webkit-backdrop-filter: blur(20px);
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     transition: height 0.5s, padding 0.5s;
